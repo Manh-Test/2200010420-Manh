@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ActionTest.Models.Stat>
+
+@{
+    ViewData["Title"] = "Stats";
+}
+
+<h1>Stats</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartmentId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartmentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalEmployee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalMale)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalFemale)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartmentId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartmentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalEmployee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalMale)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalFemale)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
